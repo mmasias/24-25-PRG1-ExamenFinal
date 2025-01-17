@@ -4,7 +4,7 @@ public class Procesdordetextomejorado {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Introduce un texto:");
+        System.out.println("Introduce un texto para poder ver de que esta compuesta :");
         String texto = scanner.nextLine();
         
         String resultado = "";
@@ -24,6 +24,14 @@ public class Procesdordetextomejorado {
                 resultado += (resultado.isEmpty() || resultado.endsWith(".") || resultado.endsWith("!") || resultado.endsWith("?"))
                         ? Character.toUpperCase(c) : Character.toLowerCase(c);
             }
+        }
+        if (enPalabra) palabras++;
+
+        System.out.println("Texto procesado: " + resultado);
+        System.out.println("Número de palabras: " + palabras);
+        System.out.println("Número de letras: " + letras);
+    }
+
 
         
 
@@ -35,4 +43,3 @@ public class Procesdordetextomejorado {
     }
 
     
-}
