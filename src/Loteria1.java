@@ -19,9 +19,44 @@ public class Loteria1 {
                     for (int j = 0; j < i; j++) {
                         if (miBoleto[j] == numeroIngresado) {
                             esDuplicado = true;
-                            //breake
+                           
                         }
                     }
+
+                    if (!esDuplicado) {
+                        miBoleto[i] = numeroIngresado;
+                        numeroValido = true; 
+                    } else {
+                        System.out.println("Error: El número " + numeroIngresado + " ya ha sido ingresado. Inténtalo de nuevo.");
+                    }
+                } else {
+                    System.out.println("Error: El número debe estar entre 1 y 49. Inténtalo de nuevo.");
+                }
+            }
+        }
+
+        for (int i = 0; i < ganadora.length; i++) {
+            for (int j = 0; j < miBoleto.length; j++) {
+                if (ganadora[i] == miBoleto[j]) {
+                    aciertos++;
+                }
+            }
+        }
+
+        
+        System.out.println("Has acertado " + aciertos + " números");
+        if (aciertos == 6) {
+            System.out.println("¡Primera categoría!");
+        } else if (aciertos == 5) {
+            System.out.println("¡Segunda categoría!");
+        } else if (aciertos == 4) {
+            System.out.println("¡Tercera categoría!");
+        } else {
+            System.out.println("Sin premio");
+        }
+    }
+}
+
 
 
                 
