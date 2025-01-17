@@ -13,7 +13,15 @@ public class Loteria1 {
             while (!numeroValido) {
                 System.out.print("Número " + (i + 1) + ": ");
                 int numeroIngresado = sc.nextInt();
-            }
-        }
-    }
-}
+            
+                if (numeroIngresado >= 1 && numeroIngresado <= 49) {
+                    boolean esDuplicado = false;
+                    for (int j = 0; j < i; j++) {
+                        if (miBoleto[j] == numeroIngresado) {
+                            esDuplicado = true;
+                            //breake
+                        }
+                    }
+
+
+                
