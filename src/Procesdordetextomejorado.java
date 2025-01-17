@@ -19,6 +19,12 @@ public class Procesdordetextomejorado {
                 }
                 resultado += (c != ' ') ? c + " " : c;
             } else {
+                if (!enPalabra) enPalabra = true;
+                letras++;
+                resultado += (resultado.isEmpty() || resultado.endsWith(".") || resultado.endsWith("!") || resultado.endsWith("?"))
+                        ? Character.toUpperCase(c) : Character.toLowerCase(c);
+            }
+
         
 
 
