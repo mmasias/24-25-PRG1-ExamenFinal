@@ -17,6 +17,11 @@ public class Procesdordetextomejorado {
                     palabras++;
                     enPalabra = false;
                 }
+                resultado += (c != ' ') ? c + " " : c;
+            } else {
+        
+
+
 
 
 
