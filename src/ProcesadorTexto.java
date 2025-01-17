@@ -3,7 +3,7 @@ import java.util.Scanner;
 class ProcesadorTexto {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         System.out.println("Introduce un texto:");
         String texto = sc.nextLine();
         String resultado = "";
@@ -15,7 +15,7 @@ class ProcesadorTexto {
             if (c == ' ' || c == '.' || c == ',' || c == ';') {
                 if (enPalabra) {
                     palabras++;
-                    enPalabra = false;º
+                    enPalabra = false;
                 }
                 if (c != ' ') {
                     resultado += c + " ";
